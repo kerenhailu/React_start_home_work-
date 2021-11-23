@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js "
+      crossorigin="anonymous"
+    >
+    
+</script>
+<body>
+  <main id="main"> </main>
+  <script type="text/babel">
+    const domElement = document.getElementById("main");
+    
+    // צור קומפוננטה שמחזירה "hello" על המסך 
+    // הפעל את הקומפונטה משאלה 3 בתוך הקומפוננטה משאלה 1
+function Hello(){
+  return <div><h1>hello</h1> <ReturnText/>  </div>
+}
+// צור קומפוננטה שמציגה רכב על המסך
+// הצג את הרכב 10 פעמים
+function Car() {
+  return (<div><h1>car</h1></div>)
+}
+// צור קומפוננטה שמחזירה את השם שלך
+function ReturnText() {
+  return <div>keren</div>
+}
+
+// צור קומפוננטות של header, main, footer והצג אותם על המסך
+function ReturnTagHeader() {
+  return (<header>head</header>)
+}
+function ReturnTagMain() {
+  return (<main>main</main>)
+}function ReturnTagFooter() {
+  return (<footer>footer</footer>)
+}
+
+// צור קומפוננטה שמקבלת שם ומציגה על המסך "hello" עם השם
+// חזור על זה 10 פעמים
+function GetNameReturnHello(props) {
+  return <div>hello {props.name}</div>
+}
+// צור קומפוננטה שמקבלת שם וגיל ומציגה על המסך את השם והגיל
+// חזור על זה 10 פעמים
+
+function GetNameAndAge(props) {
+  return <div>{props.name} {props.age}</div>
+}
+
+// צור קומפוננטה שמקבלת לינק ומחזירה תמונה
+// חזור על זה עם 3 תמונות
+function GetLink(props) {
+  return <img src={props.link}></img>
+}
+
+// <ReturnTags/>
+
+    ReactDOM.render(<div>
+      <Hello/>
+      <ReturnText/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <Car/>
+      <ReturnTagHeader/>
+      <ReturnTagMain/>
+      <ReturnTagFooter/>
+      <GetNameReturnHello name="keren"/>
+      <GetNameAndAge name="keren" age={23}/>
+      <GetLink link="https://cdn.pixabay.com/photo/2020/12/30/14/23/waterfall-5873630_960_720.jpg"/>
+      </div>, domElement
+    );
+  </script>
+</body>
+</html>
